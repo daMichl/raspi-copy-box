@@ -36,6 +36,13 @@ export default {
       vue: require('vue/package.json').version,
       path: __dirname
     }
+  },
+  mounted: async function () {
+    console.log('mounted')
+
+    var drivelist = require('drivelist')
+
+    console.log((await drivelist.list()).filter(drive => drive.isUSB === true))
   }
 }
 </script>
