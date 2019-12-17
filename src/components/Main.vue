@@ -83,7 +83,7 @@ export default {
 
       this.info('started terminal with generated rsync command')
 
-      let execCommand = `lxterminal -e 'rsync -av --info=progress2 ${this.sourceMountPoint} ${this.destinationMountPoint}/${this.destinationSubFolder}; read -p "RSYNC FINISHED"'`
+      let execCommand = `lxterminal -e 'rsync -av --info=progress2 ${this.sourceMountPoint}/ ${this.destinationMountPoint}/${this.destinationSubFolder}/; read -p "RSYNC FINISHED"'`
 
       console.log(execCommand)
       exec(execCommand)
